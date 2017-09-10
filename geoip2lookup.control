@@ -1,0 +1,7 @@
+default_version = '0.0.1'
+directory = 'extension'
+requires = 'plperl'
+relocatable = 'false'
+superuser = 'true'
+schema = 'geoip2lookup'
+
