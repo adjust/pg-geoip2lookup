@@ -1,0 +1,44 @@
+{
+   "name": "geoip2lookup",
+   "abstract": "Look up IP-address info in MaxMind's GeoIP2 MMDB files",
+   "version": "0.0.1",
+   "maintainer": [ "Chris Travers <christravers@adjust.com>" ],
+   "license": {
+      "PostgreSQL": "http://www.postgresql.org/about/licence"
+   },
+   "provides": { 
+      "geoip2lookup": {
+         "file": "extension/geoip2lookup.sql",
+         "docfile": "doc/geoip2lookup.html",
+         "version": "0.0.1",
+         "abstract": "Look up IP-address info in MaxMind's GeoIP2 MMDB files"
+      }
+   },
+   "meta-spec": {
+     "version": "1.0.0",
+     "url": "http://pgxn.org/meta/spec.txt"
+   },
+   "description": "geoip2lookup is a suite of functions for looking up data from GeoIP2 mmdb files",
+   "tags": [ "geolocation"],
+   "prereqs": {
+      "runtime": {
+        "requires": {
+           "PostgreSQL": "9.4.0",
+           "plperl": 0
+        }
+      }
+   },
+   "resources": {
+       "homepage": "http://big-elephants.com/pg-geoip2lookup",
+       "bugtracker": {
+           "web": "http://github.com/adjust/pg-geoip2lookup/issues"
+       },
+       "repository": {
+          "url": "git://github.com/adjust/pg-geoip2lookup.git",
+          "web": "http://github.com/adjust/pg-geoip2lookup",
+          "type": "git"
+       }
+   }
+}
+
+
