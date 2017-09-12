@@ -1,4 +1,5 @@
 Geoip2Lookup for PostgreSQL
+===========================
 Version 0.0.1
 
 Geoip2Lookup is a PL/Perl-based extension for connecting to MaxMind's 
@@ -16,7 +17,7 @@ yet subject to automated regression testing, as this requires creating our own
 mmdbs with the same format as MaxMind's.
 
 BUILDING AND INSTALLING THE EXTENSION
-
+=====================================
     make install
 
 Then in any database you want to use it in:
@@ -26,23 +27,25 @@ Then in any database you want to use it in:
 Set your path to the mmdb files as below.  Away you go.
 
 CONFIGURING
+============
 
 To configure use something like:
 
-SET geoip2lookup.path = '/var/lib/GeoIP/' -- or wherever the mmdbs are
-ALTER SYSTEM SET geoip2lookup.path TO CURRENT;
+    SET geoip2lookup.path = '/var/lib/GeoIP/' -- or wherever the mmdbs are
+    ALTER SYSTEM SET geoip2lookup.path TO CURRENT;
 
 Then reload PostgreSQL.
 
 Also you can set the language used for city/country lookups as:
 
-SET geoip2lookup.language = 'en';
-ALTER SYSTEM SET geoip2lookup.language to 'en';
+    SET geoip2lookup.language = 'en';
+    ALTER SYSTEM SET geoip2lookup.language to 'en';
 
 Languages are case sensitive for performance reasons.  The extension sets
 the default language to 'en' does not set a default path.
 
-API REFERENCE;
+API REFERENCE
+==============
 
 ALL APIS come with multiple, overloaded forms.  There is a convenience form that
 just takes an IP address as input and uses configured directories, etc. and there
@@ -150,6 +153,7 @@ fields returned"
     autonomous_system_organization text
 
 PERFORMANCE
+============
 
 On a gentoo vm on my macbook, I am able to query a million rows in about 3
 minutes.  Performance on a server is expected to be a bit better.  This module
@@ -158,6 +162,7 @@ is not currently optimized for bulk lookups.  That may come later.
 Also we expect to get test scripts and better documentation. 
 
 FUTURE WORK
+============
 
 In the future I expect to allow a full scan of an mmdb file by walking the
 search tree.   This would also allow materialized views to be built against
