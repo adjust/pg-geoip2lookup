@@ -1,6 +1,6 @@
-default_version = '0.0.1'
+default_version = '0.0.2'
 directory = 'extension'
-requires = 'plperl'
+requires = 'plperlu'
 relocatable = 'false'
 superuser = 'true'
 schema = 'geoip2lookup'
