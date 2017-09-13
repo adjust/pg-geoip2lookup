@@ -1,0 +1,8 @@
+0.0.3
+* Fixed city() not working due to single vs double quotes in Perl
+
+0.0.2
+* Fixed packaging bugs which meant extension could not be installed
+
+0.0.1
+* Initial version released upon the world
