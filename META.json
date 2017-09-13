@@ -1,7 +1,7 @@
 {
    "name": "geoip2lookup",
    "abstract": "Look up IP-address info in MaxMind's GeoIP2 MMDB files",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "maintainer": [ "Chris Travers <christravers@adjust.com>" ],
    "license": {
       "PostgreSQL": "http://www.postgresql.org/about/licence"
@@ -10,7 +10,7 @@
       "geoip2lookup": {
          "file": "extension/geoip2lookup.sql",
          "docfile": "doc/geoip2lookup.html",
-         "version": "0.0.1",
+         "version": "0.0.2",
          "abstract": "Look up IP-address info in MaxMind's GeoIP2 MMDB files"
       }
    },
@@ -24,7 +24,7 @@
       "runtime": {
         "requires": {
            "PostgreSQL": "9.4.0",
-           "plperl": 0
+           "plperlu": 0
         }
       }
    },
